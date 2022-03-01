@@ -1,7 +1,7 @@
 {
-  "name": "@aicore/template-nodejs",
+  "name": "@aicore/web-store",
   "version": "1.0.4",
-  "description": "Template for nodejs with unit gulp build, test, coverage, code guardian, github and Other defaults",
+  "description": "web app store",
   "main": "index.js",
   "type": "module",
   "keywords": [
