@@ -1,0 +1,2065 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+      <title>Extension Sidebar Dashboard</title>
+      <!-- CSS -->
+      <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+      <link rel="stylesheet" href="assets/css/style.css"/>
+      <link rel="stylesheet" href="assets/css/responsive.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.5/css/perfect-scrollbar.min.css">
+      <!-- Animate Css file -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   </head>
+   <body id="top">
+	  <!---- modal popup------>
+	  <div class="modal modal-popup show" id="extension-modal">
+		  <div class="modal-content">
+
+			  <!-- Modal body -->
+			  <div class="modal-body">
+				  <div class="modal-main-tab">
+					  <div class="modal-tab-inner">
+						  <ul class="nav nav-tabs modal-nav-tabs" id="myTab" role="tablist">
+							  <li class="nav-item">
+								  <a class="nav-link active" id="extension-tab" data-toggle="tab" href="#extension" role="tab" aria-controls="extension" aria-selected="true">Extensions</a>
+							  </li>
+							  <li class="nav-item">
+								  <a class="nav-link" id="theme-tab" data-toggle="tab" href="#theme" role="tab" aria-controls="theme" aria-selected="false">Themes</a>
+							  </li>
+						  </ul>
+						  <div class="tab-content" id="myTabContent">
+							  <div class="tab-pane fade show active" id="extension" role="tabpanel" aria-labelledby="extension-tab">
+								  <div class="extension-main-container">
+									  <div class="extension-search d-flex align-items-center">
+										  <div class="ex-input w-100">
+											  <input type="text" placeholder="Search Here..."/>
+											  <span class="input-addon">
+												<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.813 14.8711L11.8369 10.8951C12.9205 9.56987 13.4532 7.87893 13.325 6.17198C13.1967 4.46502 12.4173 2.87267 11.1479 1.72427C9.87853 0.575873 8.21632 -0.0406994 6.50509 0.00208668C4.79386 0.0448727 3.16454 0.743743 1.95414 1.95414C0.743743 3.16454 0.0448727 4.79386 0.00208668 6.50509C-0.0406994 8.21632 0.575873 9.87853 1.72427 11.1479C2.87267 12.4173 4.46502 13.1967 6.17198 13.325C7.87893 13.4532 9.56987 12.9205 10.8951 11.8369L14.8711 15.813C14.9968 15.9344 15.165 16.0015 15.3397 16C15.5143 15.9985 15.6814 15.9284 15.8049 15.8049C15.9284 15.6814 15.9985 15.5143 16 15.3397C16.0015 15.165 15.9344 14.9968 15.813 14.8711ZM6.68251 12.0115C5.62855 12.0115 4.59825 11.6989 3.72191 11.1134C2.84556 10.5278 2.16254 9.69556 1.7592 8.72182C1.35587 7.74808 1.25034 6.6766 1.45595 5.64289C1.66157 4.60917 2.16911 3.65964 2.91437 2.91437C3.65964 2.16911 4.60917 1.66157 5.64289 1.45595C6.6766 1.25034 7.74808 1.35587 8.72182 1.7592C9.69556 2.16254 10.5278 2.84556 11.1134 3.72191C11.6989 4.59825 12.0115 5.62855 12.0115 6.68251C12.0099 8.09535 11.4479 9.44987 10.4489 10.4489C9.44987 11.4479 8.09535 12.0099 6.68251 12.0115Z" fill="#D0D0D0"/>
+</svg>
+
+											</span>
+										  </div>
+										  <button class="btn-search">Search</button>
+									  </div>
+									  <div class="extension-tab-main">
+										  <div class="extension-tab-top">
+											  <h4 class="tab-title">Filter</h4>
+											  <ul class="nav nav-tabs ex-tabs" id="myTab" role="tablist">
+												  <li class="nav-item">
+													  <a class="nav-link active" id="js-tab" data-toggle="tab" href="#js" role="tab" aria-controls="js" aria-selected="true">
+														  <img src="images/tab-img1.png" alt="image"/>
+														  <span>Javascript</span>
+													  </a>
+												  </li>
+												  <li class="nav-item">
+													  <a class="nav-link " id="html-tab" data-toggle="tab" href="#html" role="tab" aria-controls="html" aria-selected="true">
+														  <img src="images/tab-img2.png" alt="image"/>
+														  <span>HTML5</span>
+													  </a>
+												  </li>
+												  <li class="nav-item">
+													  <a class="nav-link " id="css-tab" data-toggle="tab" href="#css" role="tab" aria-controls="css" aria-selected="true">
+														  <img src="images/tab-img3.png" alt="image"/>
+														  <span>CSS3</span>
+													  </a>
+												  </li>
+												  <li class="nav-item">
+													  <a class="nav-link " id="ins-tab" data-toggle="tab" href="#ins" role="tab" aria-controls="ins" aria-selected="true">
+														  <img src="images/tab-img4.png" alt="image"/>
+														  <span>Installed</span>
+													  </a>
+												  </li>
+											  </ul>
+										  </div>
+										  <div class="tab-content ex-tab-content" id="myTabContent">
+											  <div class="tab-pane fade show active" id="js" role="tabpanel" aria-labelledby="js-tab">
+												  <div class="project-card-main">
+													  <div class="card-top-bar d-flex align-items-center justify-content-between">
+														  <h4 class="tab-title mb-0">Based on current project</h4>
+														  <a href="#" class="view-all">View All</a>
+													  </div>
+													  <ul class="project-list">
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+																	  <div class="project-img">
+																		  <img src="images/projec-img1.png" alt="img-fluid"/>
+																	  </div>
+																	  <div class="project-des">
+																		  <h5>Angular</h5>
+																		  <span class="d-flex align-items-center">Google
+																		<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"/>
+</svg>
+
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="project-para">
+																	  <p>
+																		  Angular version 10 code complition and live previews from google.
+																	  </p>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"/>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-download d-flex align-items-center">
+
+																		  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M10.75 10.5H2.58332C2.26115 10.5 1.99998 10.7612 1.99998 11.0833C1.99998 11.4055 2.26115 11.6667 2.58332 11.6667H10.75C11.0722 11.6667 11.3333 11.4055 11.3333 11.0833C11.3333 10.7612 11.0722 10.5 10.75 10.5Z" fill="white"/>
+																			  <path d="M1.99998 9.91663V11.0833C1.99998 11.4055 2.26115 11.6666 2.58332 11.6666C2.90548 11.6666 3.16665 11.4055 3.16665 11.0833V9.91663C3.16665 9.59446 2.90548 9.33329 2.58332 9.33329C2.26115 9.33329 1.99998 9.59446 1.99998 9.91663Z" fill="white"/>
+																			  <path d="M10.1667 9.91663V11.0833C10.1667 11.4055 10.4278 11.6666 10.75 11.6666C11.0722 11.6666 11.3333 11.4055 11.3333 11.0833V9.91663C11.3333 9.59446 11.0722 9.33329 10.75 9.33329C10.4278 9.33329 10.1667 9.59446 10.1667 9.91663Z" fill="white"/>
+																			  <path d="M6.66667 8.75004C6.54573 8.75096 6.4275 8.71427 6.32834 8.64504L3.995 7.00004C3.86924 6.91083 3.78392 6.77546 3.75768 6.62352C3.73145 6.47157 3.76644 6.31543 3.855 6.18921C3.89921 6.12612 3.95548 6.07241 4.02055 6.03119C4.08563 5.98996 4.15823 5.96204 4.23416 5.94902C4.31009 5.936 4.38784 5.93815 4.46294 5.95535C4.53803 5.97255 4.60897 6.00445 4.67167 6.04921L6.66667 7.44338L8.65 5.95004C8.77377 5.85722 8.92934 5.81736 9.0825 5.83924C9.23565 5.86112 9.37384 5.94294 9.46667 6.06671C9.55949 6.19048 9.59935 6.34605 9.57747 6.49921C9.55559 6.65236 9.47377 6.79055 9.35 6.88338L7.01667 8.63338C6.9157 8.70911 6.79288 8.75004 6.66667 8.75004Z" fill="white"/>
+																			  <path d="M6.66666 7.58333C6.51195 7.58333 6.36358 7.52187 6.25418 7.41248C6.14479 7.30308 6.08333 7.15471 6.08333 7V2.33333C6.08333 2.17862 6.14479 2.03025 6.25418 1.92085C6.36358 1.81146 6.51195 1.75 6.66666 1.75C6.82137 1.75 6.96974 1.81146 7.07914 1.92085C7.18854 2.03025 7.24999 2.17862 7.24999 2.33333V7C7.24999 7.15471 7.18854 7.30308 7.07914 7.41248C6.96974 7.52187 6.82137 7.58333 6.66666 7.58333Z" fill="white"/>
+																		  </svg>
+
+																		  90k
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+																	  <div class="project-img">
+																		  <img src="images/projec-img2.png" alt="img-fluid"/>
+																	  </div>
+																	  <div class="project-des">
+																		  <h5>Angular Pack</h5>
+																		  <span class="d-flex align-items-center">
+																		Eternal’s dev team
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="project-para">
+																	  <p>
+																		  Angular extension and icons pack.
+																	  </p>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"/>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-remove d-flex align-items-center">
+
+																		  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M1.5 3H2.5H10.5" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"/>
+																			  <path d="M4 3V2C4 1.73478 4.10536 1.48043 4.29289 1.29289C4.48043 1.10536 4.73478 1 5 1H7C7.26522 1 7.51957 1.10536 7.70711 1.29289C7.89464 1.48043 8 1.73478 8 2V3M9.5 3V10C9.5 10.2652 9.39464 10.5196 9.20711 10.7071C9.01957 10.8946 8.76522 11 8.5 11H3.5C3.23478 11 2.98043 10.8946 2.79289 10.7071C2.60536 10.5196 2.5 10.2652 2.5 10V3H9.5Z" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"/>
+																			  <path d="M5 5.5V8.5" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"/>
+																			  <path d="M7 5.5V8.5" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"/>
+																		  </svg>
+
+																		  Remove
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+																	  <div class="project-img">
+																		  <img src="images/projec-img3.png" alt="img-fluid"/>
+																	  </div>
+																	  <div class="project-des">
+																		  <h5>Angular Cli</h5>
+																		  <span class="d-flex align-items-center">Core.ai <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"></path>
+</svg>
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="project-para">
+																	  <p>
+																		  Angular version 10 code complition and live previews from google.
+																	  </p>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"/>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-download d-flex align-items-center">
+
+																		  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M10.75 10.5H2.58332C2.26115 10.5 1.99998 10.7612 1.99998 11.0833C1.99998 11.4055 2.26115 11.6667 2.58332 11.6667H10.75C11.0722 11.6667 11.3333 11.4055 11.3333 11.0833C11.3333 10.7612 11.0722 10.5 10.75 10.5Z" fill="white"/>
+																			  <path d="M1.99998 9.91663V11.0833C1.99998 11.4055 2.26115 11.6666 2.58332 11.6666C2.90548 11.6666 3.16665 11.4055 3.16665 11.0833V9.91663C3.16665 9.59446 2.90548 9.33329 2.58332 9.33329C2.26115 9.33329 1.99998 9.59446 1.99998 9.91663Z" fill="white"/>
+																			  <path d="M10.1667 9.91663V11.0833C10.1667 11.4055 10.4278 11.6666 10.75 11.6666C11.0722 11.6666 11.3333 11.4055 11.3333 11.0833V9.91663C11.3333 9.59446 11.0722 9.33329 10.75 9.33329C10.4278 9.33329 10.1667 9.59446 10.1667 9.91663Z" fill="white"/>
+																			  <path d="M6.66667 8.75004C6.54573 8.75096 6.4275 8.71427 6.32834 8.64504L3.995 7.00004C3.86924 6.91083 3.78392 6.77546 3.75768 6.62352C3.73145 6.47157 3.76644 6.31543 3.855 6.18921C3.89921 6.12612 3.95548 6.07241 4.02055 6.03119C4.08563 5.98996 4.15823 5.96204 4.23416 5.94902C4.31009 5.936 4.38784 5.93815 4.46294 5.95535C4.53803 5.97255 4.60897 6.00445 4.67167 6.04921L6.66667 7.44338L8.65 5.95004C8.77377 5.85722 8.92934 5.81736 9.0825 5.83924C9.23565 5.86112 9.37384 5.94294 9.46667 6.06671C9.55949 6.19048 9.59935 6.34605 9.57747 6.49921C9.55559 6.65236 9.47377 6.79055 9.35 6.88338L7.01667 8.63338C6.9157 8.70911 6.79288 8.75004 6.66667 8.75004Z" fill="white"/>
+																			  <path d="M6.66666 7.58333C6.51195 7.58333 6.36358 7.52187 6.25418 7.41248C6.14479 7.30308 6.08333 7.15471 6.08333 7V2.33333C6.08333 2.17862 6.14479 2.03025 6.25418 1.92085C6.36358 1.81146 6.51195 1.75 6.66666 1.75C6.82137 1.75 6.96974 1.81146 7.07914 1.92085C7.18854 2.03025 7.24999 2.17862 7.24999 2.33333V7C7.24999 7.15471 7.18854 7.30308 7.07914 7.41248C6.96974 7.52187 6.82137 7.58333 6.66666 7.58333Z" fill="white"/>
+																		  </svg>
+
+																		  90k
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+																	  <div class="project-img">
+																		  <img src="images/projec-img1.png" alt="img-fluid"/>
+																	  </div>
+																	  <div class="project-des">
+																		  <h5>Angular</h5>
+																		  <span class="d-flex align-items-center">Google
+																		<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"/>
+</svg>
+
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="project-para">
+																	  <p>
+																		  Angular version 10 code complition and live previews from google.
+																	  </p>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"/>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-download d-flex align-items-center">
+
+																		  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M10.75 10.5H2.58332C2.26115 10.5 1.99998 10.7612 1.99998 11.0833C1.99998 11.4055 2.26115 11.6667 2.58332 11.6667H10.75C11.0722 11.6667 11.3333 11.4055 11.3333 11.0833C11.3333 10.7612 11.0722 10.5 10.75 10.5Z" fill="white"/>
+																			  <path d="M1.99998 9.91663V11.0833C1.99998 11.4055 2.26115 11.6666 2.58332 11.6666C2.90548 11.6666 3.16665 11.4055 3.16665 11.0833V9.91663C3.16665 9.59446 2.90548 9.33329 2.58332 9.33329C2.26115 9.33329 1.99998 9.59446 1.99998 9.91663Z" fill="white"/>
+																			  <path d="M10.1667 9.91663V11.0833C10.1667 11.4055 10.4278 11.6666 10.75 11.6666C11.0722 11.6666 11.3333 11.4055 11.3333 11.0833V9.91663C11.3333 9.59446 11.0722 9.33329 10.75 9.33329C10.4278 9.33329 10.1667 9.59446 10.1667 9.91663Z" fill="white"/>
+																			  <path d="M6.66667 8.75004C6.54573 8.75096 6.4275 8.71427 6.32834 8.64504L3.995 7.00004C3.86924 6.91083 3.78392 6.77546 3.75768 6.62352C3.73145 6.47157 3.76644 6.31543 3.855 6.18921C3.89921 6.12612 3.95548 6.07241 4.02055 6.03119C4.08563 5.98996 4.15823 5.96204 4.23416 5.94902C4.31009 5.936 4.38784 5.93815 4.46294 5.95535C4.53803 5.97255 4.60897 6.00445 4.67167 6.04921L6.66667 7.44338L8.65 5.95004C8.77377 5.85722 8.92934 5.81736 9.0825 5.83924C9.23565 5.86112 9.37384 5.94294 9.46667 6.06671C9.55949 6.19048 9.59935 6.34605 9.57747 6.49921C9.55559 6.65236 9.47377 6.79055 9.35 6.88338L7.01667 8.63338C6.9157 8.70911 6.79288 8.75004 6.66667 8.75004Z" fill="white"/>
+																			  <path d="M6.66666 7.58333C6.51195 7.58333 6.36358 7.52187 6.25418 7.41248C6.14479 7.30308 6.08333 7.15471 6.08333 7V2.33333C6.08333 2.17862 6.14479 2.03025 6.25418 1.92085C6.36358 1.81146 6.51195 1.75 6.66666 1.75C6.82137 1.75 6.96974 1.81146 7.07914 1.92085C7.18854 2.03025 7.24999 2.17862 7.24999 2.33333V7C7.24999 7.15471 7.18854 7.30308 7.07914 7.41248C6.96974 7.52187 6.82137 7.58333 6.66666 7.58333Z" fill="white"/>
+																		  </svg>
+
+																		  90k
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+													  </ul>
+												  </div>
+												  <div class="project-card-main loading-card-main">
+													  <div class="card-top-bar d-flex align-items-center justify-content-between">
+														  <h4 class="tab-title mb-0">Based on current project</h4>
+														  <a href="#" class="view-all">
+															  <span>Sort By :</span>
+															  <select>
+																  <option value="option1">Featured
+																  </option>
+																  <option value="option2">option2
+																  </option>
+															  </select>
+														  </a>
+													  </div>
+													  <ul class="project-list">
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+																	  <div class="loading-img mr-3">
+																	  </div>
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-para">
+																	  <p></p>
+																	  <p></p>
+																	  <p></p>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate">
+
+
+																	  </div>
+																	  <div class="loading-rate">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+																	  <div class="loading-img mr-3">
+																	  </div>
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-para">
+																	  <p></p>
+																	  <p></p>
+																	  <p></p>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate">
+
+
+																	  </div>
+																	  <div class="loading-rate">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+																	  <div class="loading-img mr-3">
+																	  </div>
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-para">
+																	  <p></p>
+																	  <p></p>
+																	  <p></p>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate">
+
+
+																	  </div>
+																	  <div class="loading-rate">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+																	  <div class="loading-img mr-3">
+																	  </div>
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-para">
+																	  <p></p>
+																	  <p></p>
+																	  <p></p>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate">
+
+
+																	  </div>
+																	  <div class="loading-rate">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+													  </ul>
+												  </div>
+											  </div>
+											  <div class="tab-pane fade " id="html" role="tabpanel" aria-labelledby="html-tab">
+												  <div class="project-card-main">
+													  <div class="card-top-bar d-flex align-items-center justify-content-between">
+														  <h4 class="tab-title mb-0">Based on current project</h4>
+														  <a href="#" class="view-all">View All</a>
+													  </div>
+													  <ul class="project-list">
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+																	  <div class="project-img">
+																		  <img src="images/projec-img1.png" alt="img-fluid"/>
+																	  </div>
+																	  <div class="project-des">
+																		  <h5>Angular</h5>
+																		  <span class="d-flex align-items-center">Google
+																		<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"/>
+</svg>
+
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="project-para">
+																	  <p>
+																		  Angular version 10 code complition and live previews from google.
+																	  </p>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"/>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-download d-flex align-items-center">
+
+																		  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M10.75 10.5H2.58332C2.26115 10.5 1.99998 10.7612 1.99998 11.0833C1.99998 11.4055 2.26115 11.6667 2.58332 11.6667H10.75C11.0722 11.6667 11.3333 11.4055 11.3333 11.0833C11.3333 10.7612 11.0722 10.5 10.75 10.5Z" fill="white"/>
+																			  <path d="M1.99998 9.91663V11.0833C1.99998 11.4055 2.26115 11.6666 2.58332 11.6666C2.90548 11.6666 3.16665 11.4055 3.16665 11.0833V9.91663C3.16665 9.59446 2.90548 9.33329 2.58332 9.33329C2.26115 9.33329 1.99998 9.59446 1.99998 9.91663Z" fill="white"/>
+																			  <path d="M10.1667 9.91663V11.0833C10.1667 11.4055 10.4278 11.6666 10.75 11.6666C11.0722 11.6666 11.3333 11.4055 11.3333 11.0833V9.91663C11.3333 9.59446 11.0722 9.33329 10.75 9.33329C10.4278 9.33329 10.1667 9.59446 10.1667 9.91663Z" fill="white"/>
+																			  <path d="M6.66667 8.75004C6.54573 8.75096 6.4275 8.71427 6.32834 8.64504L3.995 7.00004C3.86924 6.91083 3.78392 6.77546 3.75768 6.62352C3.73145 6.47157 3.76644 6.31543 3.855 6.18921C3.89921 6.12612 3.95548 6.07241 4.02055 6.03119C4.08563 5.98996 4.15823 5.96204 4.23416 5.94902C4.31009 5.936 4.38784 5.93815 4.46294 5.95535C4.53803 5.97255 4.60897 6.00445 4.67167 6.04921L6.66667 7.44338L8.65 5.95004C8.77377 5.85722 8.92934 5.81736 9.0825 5.83924C9.23565 5.86112 9.37384 5.94294 9.46667 6.06671C9.55949 6.19048 9.59935 6.34605 9.57747 6.49921C9.55559 6.65236 9.47377 6.79055 9.35 6.88338L7.01667 8.63338C6.9157 8.70911 6.79288 8.75004 6.66667 8.75004Z" fill="white"/>
+																			  <path d="M6.66666 7.58333C6.51195 7.58333 6.36358 7.52187 6.25418 7.41248C6.14479 7.30308 6.08333 7.15471 6.08333 7V2.33333C6.08333 2.17862 6.14479 2.03025 6.25418 1.92085C6.36358 1.81146 6.51195 1.75 6.66666 1.75C6.82137 1.75 6.96974 1.81146 7.07914 1.92085C7.18854 2.03025 7.24999 2.17862 7.24999 2.33333V7C7.24999 7.15471 7.18854 7.30308 7.07914 7.41248C6.96974 7.52187 6.82137 7.58333 6.66666 7.58333Z" fill="white"/>
+																		  </svg>
+
+																		  90k
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+																	  <div class="project-img">
+																		  <img src="images/projec-img2.png" alt="img-fluid"/>
+																	  </div>
+																	  <div class="project-des">
+																		  <h5>Angular Pack</h5>
+																		  <span class="d-flex align-items-center">
+																		Eternal’s dev team
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="project-para">
+																	  <p>
+																		  Angular extension and icons pack.
+																	  </p>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"/>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-remove d-flex align-items-center">
+
+																		  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M1.5 3H2.5H10.5" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"/>
+																			  <path d="M4 3V2C4 1.73478 4.10536 1.48043 4.29289 1.29289C4.48043 1.10536 4.73478 1 5 1H7C7.26522 1 7.51957 1.10536 7.70711 1.29289C7.89464 1.48043 8 1.73478 8 2V3M9.5 3V10C9.5 10.2652 9.39464 10.5196 9.20711 10.7071C9.01957 10.8946 8.76522 11 8.5 11H3.5C3.23478 11 2.98043 10.8946 2.79289 10.7071C2.60536 10.5196 2.5 10.2652 2.5 10V3H9.5Z" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"/>
+																			  <path d="M5 5.5V8.5" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"/>
+																			  <path d="M7 5.5V8.5" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"/>
+																		  </svg>
+
+																		  Remove
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+																	  <div class="project-img">
+																		  <img src="images/projec-img3.png" alt="img-fluid"/>
+																	  </div>
+																	  <div class="project-des">
+																		  <h5>Angular Cli</h5>
+																		  <span class="d-flex align-items-center">Core.ai <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"></path>
+</svg>
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="project-para">
+																	  <p>
+																		  Angular version 10 code complition and live previews from google.
+																	  </p>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"/>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-download d-flex align-items-center">
+
+																		  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M10.75 10.5H2.58332C2.26115 10.5 1.99998 10.7612 1.99998 11.0833C1.99998 11.4055 2.26115 11.6667 2.58332 11.6667H10.75C11.0722 11.6667 11.3333 11.4055 11.3333 11.0833C11.3333 10.7612 11.0722 10.5 10.75 10.5Z" fill="white"/>
+																			  <path d="M1.99998 9.91663V11.0833C1.99998 11.4055 2.26115 11.6666 2.58332 11.6666C2.90548 11.6666 3.16665 11.4055 3.16665 11.0833V9.91663C3.16665 9.59446 2.90548 9.33329 2.58332 9.33329C2.26115 9.33329 1.99998 9.59446 1.99998 9.91663Z" fill="white"/>
+																			  <path d="M10.1667 9.91663V11.0833C10.1667 11.4055 10.4278 11.6666 10.75 11.6666C11.0722 11.6666 11.3333 11.4055 11.3333 11.0833V9.91663C11.3333 9.59446 11.0722 9.33329 10.75 9.33329C10.4278 9.33329 10.1667 9.59446 10.1667 9.91663Z" fill="white"/>
+																			  <path d="M6.66667 8.75004C6.54573 8.75096 6.4275 8.71427 6.32834 8.64504L3.995 7.00004C3.86924 6.91083 3.78392 6.77546 3.75768 6.62352C3.73145 6.47157 3.76644 6.31543 3.855 6.18921C3.89921 6.12612 3.95548 6.07241 4.02055 6.03119C4.08563 5.98996 4.15823 5.96204 4.23416 5.94902C4.31009 5.936 4.38784 5.93815 4.46294 5.95535C4.53803 5.97255 4.60897 6.00445 4.67167 6.04921L6.66667 7.44338L8.65 5.95004C8.77377 5.85722 8.92934 5.81736 9.0825 5.83924C9.23565 5.86112 9.37384 5.94294 9.46667 6.06671C9.55949 6.19048 9.59935 6.34605 9.57747 6.49921C9.55559 6.65236 9.47377 6.79055 9.35 6.88338L7.01667 8.63338C6.9157 8.70911 6.79288 8.75004 6.66667 8.75004Z" fill="white"/>
+																			  <path d="M6.66666 7.58333C6.51195 7.58333 6.36358 7.52187 6.25418 7.41248C6.14479 7.30308 6.08333 7.15471 6.08333 7V2.33333C6.08333 2.17862 6.14479 2.03025 6.25418 1.92085C6.36358 1.81146 6.51195 1.75 6.66666 1.75C6.82137 1.75 6.96974 1.81146 7.07914 1.92085C7.18854 2.03025 7.24999 2.17862 7.24999 2.33333V7C7.24999 7.15471 7.18854 7.30308 7.07914 7.41248C6.96974 7.52187 6.82137 7.58333 6.66666 7.58333Z" fill="white"/>
+																		  </svg>
+
+																		  90k
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+																	  <div class="project-img">
+																		  <img src="images/projec-img1.png" alt="img-fluid"/>
+																	  </div>
+																	  <div class="project-des">
+																		  <h5>Angular</h5>
+																		  <span class="d-flex align-items-center">Google
+																		<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"/>
+</svg>
+
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="project-para">
+																	  <p>
+																		  Angular version 10 code complition and live previews from google.
+																	  </p>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"/>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-download d-flex align-items-center">
+
+																		  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M10.75 10.5H2.58332C2.26115 10.5 1.99998 10.7612 1.99998 11.0833C1.99998 11.4055 2.26115 11.6667 2.58332 11.6667H10.75C11.0722 11.6667 11.3333 11.4055 11.3333 11.0833C11.3333 10.7612 11.0722 10.5 10.75 10.5Z" fill="white"/>
+																			  <path d="M1.99998 9.91663V11.0833C1.99998 11.4055 2.26115 11.6666 2.58332 11.6666C2.90548 11.6666 3.16665 11.4055 3.16665 11.0833V9.91663C3.16665 9.59446 2.90548 9.33329 2.58332 9.33329C2.26115 9.33329 1.99998 9.59446 1.99998 9.91663Z" fill="white"/>
+																			  <path d="M10.1667 9.91663V11.0833C10.1667 11.4055 10.4278 11.6666 10.75 11.6666C11.0722 11.6666 11.3333 11.4055 11.3333 11.0833V9.91663C11.3333 9.59446 11.0722 9.33329 10.75 9.33329C10.4278 9.33329 10.1667 9.59446 10.1667 9.91663Z" fill="white"/>
+																			  <path d="M6.66667 8.75004C6.54573 8.75096 6.4275 8.71427 6.32834 8.64504L3.995 7.00004C3.86924 6.91083 3.78392 6.77546 3.75768 6.62352C3.73145 6.47157 3.76644 6.31543 3.855 6.18921C3.89921 6.12612 3.95548 6.07241 4.02055 6.03119C4.08563 5.98996 4.15823 5.96204 4.23416 5.94902C4.31009 5.936 4.38784 5.93815 4.46294 5.95535C4.53803 5.97255 4.60897 6.00445 4.67167 6.04921L6.66667 7.44338L8.65 5.95004C8.77377 5.85722 8.92934 5.81736 9.0825 5.83924C9.23565 5.86112 9.37384 5.94294 9.46667 6.06671C9.55949 6.19048 9.59935 6.34605 9.57747 6.49921C9.55559 6.65236 9.47377 6.79055 9.35 6.88338L7.01667 8.63338C6.9157 8.70911 6.79288 8.75004 6.66667 8.75004Z" fill="white"/>
+																			  <path d="M6.66666 7.58333C6.51195 7.58333 6.36358 7.52187 6.25418 7.41248C6.14479 7.30308 6.08333 7.15471 6.08333 7V2.33333C6.08333 2.17862 6.14479 2.03025 6.25418 1.92085C6.36358 1.81146 6.51195 1.75 6.66666 1.75C6.82137 1.75 6.96974 1.81146 7.07914 1.92085C7.18854 2.03025 7.24999 2.17862 7.24999 2.33333V7C7.24999 7.15471 7.18854 7.30308 7.07914 7.41248C6.96974 7.52187 6.82137 7.58333 6.66666 7.58333Z" fill="white"/>
+																		  </svg>
+
+																		  90k
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+													  </ul>
+												  </div>
+												  <div class="project-card-main loading-card-main">
+													  <div class="card-top-bar d-flex align-items-center justify-content-between">
+														  <h4 class="tab-title mb-0">Based on current project</h4>
+														  <div class="card-top-bar d-flex align-items-center justify-content-between">
+															  <h4 class="tab-title mb-0">Based on current project</h4>
+															  <a href="#" class="view-all">
+																  <span>Sort By :</span>
+																  <select>
+																	  <option value="option1">Featured
+																	  </option>
+																	  <option value="option2">option2
+																	  </option>
+																  </select>
+															  </a>
+														  </div>
+													  </div>
+													  <ul class="project-list">
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+																	  <div class="loading-img mr-3">
+																	  </div>
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-para">
+																	  <p></p>
+																	  <p></p>
+																	  <p></p>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate">
+
+
+																	  </div>
+																	  <div class="loading-rate">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+																	  <div class="loading-img mr-3">
+																	  </div>
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-para">
+																	  <p></p>
+																	  <p></p>
+																	  <p></p>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate">
+
+
+																	  </div>
+																	  <div class="loading-rate">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+																	  <div class="loading-img mr-3">
+																	  </div>
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-para">
+																	  <p></p>
+																	  <p></p>
+																	  <p></p>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate">
+
+
+																	  </div>
+																	  <div class="loading-rate">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+																	  <div class="loading-img mr-3">
+																	  </div>
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-para">
+																	  <p></p>
+																	  <p></p>
+																	  <p></p>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate">
+
+
+																	  </div>
+																	  <div class="loading-rate">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+													  </ul>
+												  </div>
+											  </div>
+											  <div class="tab-pane fade " id="css" role="tabpanel" aria-labelledby="css-tab">
+												  <div class="project-card-main">
+													  <div class="card-top-bar d-flex align-items-center justify-content-between">
+														  <h4 class="tab-title mb-0">Based on current project</h4>
+														  <a href="#" class="view-all">View All</a>
+													  </div>
+													  <ul class="project-list">
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+																	  <div class="project-img">
+																		  <img src="images/projec-img1.png" alt="img-fluid"/>
+																	  </div>
+																	  <div class="project-des">
+																		  <h5>Angular</h5>
+																		  <span class="d-flex align-items-center">Google
+																		<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"/>
+</svg>
+
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="project-para">
+																	  <p>
+																		  Angular version 10 code complition and live previews from google.
+																	  </p>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"/>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-download d-flex align-items-center">
+
+																		  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M10.75 10.5H2.58332C2.26115 10.5 1.99998 10.7612 1.99998 11.0833C1.99998 11.4055 2.26115 11.6667 2.58332 11.6667H10.75C11.0722 11.6667 11.3333 11.4055 11.3333 11.0833C11.3333 10.7612 11.0722 10.5 10.75 10.5Z" fill="white"/>
+																			  <path d="M1.99998 9.91663V11.0833C1.99998 11.4055 2.26115 11.6666 2.58332 11.6666C2.90548 11.6666 3.16665 11.4055 3.16665 11.0833V9.91663C3.16665 9.59446 2.90548 9.33329 2.58332 9.33329C2.26115 9.33329 1.99998 9.59446 1.99998 9.91663Z" fill="white"/>
+																			  <path d="M10.1667 9.91663V11.0833C10.1667 11.4055 10.4278 11.6666 10.75 11.6666C11.0722 11.6666 11.3333 11.4055 11.3333 11.0833V9.91663C11.3333 9.59446 11.0722 9.33329 10.75 9.33329C10.4278 9.33329 10.1667 9.59446 10.1667 9.91663Z" fill="white"/>
+																			  <path d="M6.66667 8.75004C6.54573 8.75096 6.4275 8.71427 6.32834 8.64504L3.995 7.00004C3.86924 6.91083 3.78392 6.77546 3.75768 6.62352C3.73145 6.47157 3.76644 6.31543 3.855 6.18921C3.89921 6.12612 3.95548 6.07241 4.02055 6.03119C4.08563 5.98996 4.15823 5.96204 4.23416 5.94902C4.31009 5.936 4.38784 5.93815 4.46294 5.95535C4.53803 5.97255 4.60897 6.00445 4.67167 6.04921L6.66667 7.44338L8.65 5.95004C8.77377 5.85722 8.92934 5.81736 9.0825 5.83924C9.23565 5.86112 9.37384 5.94294 9.46667 6.06671C9.55949 6.19048 9.59935 6.34605 9.57747 6.49921C9.55559 6.65236 9.47377 6.79055 9.35 6.88338L7.01667 8.63338C6.9157 8.70911 6.79288 8.75004 6.66667 8.75004Z" fill="white"/>
+																			  <path d="M6.66666 7.58333C6.51195 7.58333 6.36358 7.52187 6.25418 7.41248C6.14479 7.30308 6.08333 7.15471 6.08333 7V2.33333C6.08333 2.17862 6.14479 2.03025 6.25418 1.92085C6.36358 1.81146 6.51195 1.75 6.66666 1.75C6.82137 1.75 6.96974 1.81146 7.07914 1.92085C7.18854 2.03025 7.24999 2.17862 7.24999 2.33333V7C7.24999 7.15471 7.18854 7.30308 7.07914 7.41248C6.96974 7.52187 6.82137 7.58333 6.66666 7.58333Z" fill="white"/>
+																		  </svg>
+
+																		  90k
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+																	  <div class="project-img">
+																		  <img src="images/projec-img2.png" alt="img-fluid"/>
+																	  </div>
+																	  <div class="project-des">
+																		  <h5>Angular Pack</h5>
+																		  <span class="d-flex align-items-center">
+																		Eternal’s dev team
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="project-para">
+																	  <p>
+																		  Angular extension and icons pack.
+																	  </p>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"/>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-remove d-flex align-items-center">
+
+																		  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M1.5 3H2.5H10.5" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"/>
+																			  <path d="M4 3V2C4 1.73478 4.10536 1.48043 4.29289 1.29289C4.48043 1.10536 4.73478 1 5 1H7C7.26522 1 7.51957 1.10536 7.70711 1.29289C7.89464 1.48043 8 1.73478 8 2V3M9.5 3V10C9.5 10.2652 9.39464 10.5196 9.20711 10.7071C9.01957 10.8946 8.76522 11 8.5 11H3.5C3.23478 11 2.98043 10.8946 2.79289 10.7071C2.60536 10.5196 2.5 10.2652 2.5 10V3H9.5Z" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"/>
+																			  <path d="M5 5.5V8.5" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"/>
+																			  <path d="M7 5.5V8.5" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"/>
+																		  </svg>
+
+																		  Remove
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+																	  <div class="project-img">
+																		  <img src="images/projec-img3.png" alt="img-fluid"/>
+																	  </div>
+																	  <div class="project-des">
+																		  <h5>Angular Cli</h5>
+																		  <span class="d-flex align-items-center">Core.ai <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"></path>
+</svg>
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="project-para">
+																	  <p>
+																		  Angular version 10 code complition and live previews from google.
+																	  </p>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"/>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-download d-flex align-items-center">
+
+																		  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M10.75 10.5H2.58332C2.26115 10.5 1.99998 10.7612 1.99998 11.0833C1.99998 11.4055 2.26115 11.6667 2.58332 11.6667H10.75C11.0722 11.6667 11.3333 11.4055 11.3333 11.0833C11.3333 10.7612 11.0722 10.5 10.75 10.5Z" fill="white"/>
+																			  <path d="M1.99998 9.91663V11.0833C1.99998 11.4055 2.26115 11.6666 2.58332 11.6666C2.90548 11.6666 3.16665 11.4055 3.16665 11.0833V9.91663C3.16665 9.59446 2.90548 9.33329 2.58332 9.33329C2.26115 9.33329 1.99998 9.59446 1.99998 9.91663Z" fill="white"/>
+																			  <path d="M10.1667 9.91663V11.0833C10.1667 11.4055 10.4278 11.6666 10.75 11.6666C11.0722 11.6666 11.3333 11.4055 11.3333 11.0833V9.91663C11.3333 9.59446 11.0722 9.33329 10.75 9.33329C10.4278 9.33329 10.1667 9.59446 10.1667 9.91663Z" fill="white"/>
+																			  <path d="M6.66667 8.75004C6.54573 8.75096 6.4275 8.71427 6.32834 8.64504L3.995 7.00004C3.86924 6.91083 3.78392 6.77546 3.75768 6.62352C3.73145 6.47157 3.76644 6.31543 3.855 6.18921C3.89921 6.12612 3.95548 6.07241 4.02055 6.03119C4.08563 5.98996 4.15823 5.96204 4.23416 5.94902C4.31009 5.936 4.38784 5.93815 4.46294 5.95535C4.53803 5.97255 4.60897 6.00445 4.67167 6.04921L6.66667 7.44338L8.65 5.95004C8.77377 5.85722 8.92934 5.81736 9.0825 5.83924C9.23565 5.86112 9.37384 5.94294 9.46667 6.06671C9.55949 6.19048 9.59935 6.34605 9.57747 6.49921C9.55559 6.65236 9.47377 6.79055 9.35 6.88338L7.01667 8.63338C6.9157 8.70911 6.79288 8.75004 6.66667 8.75004Z" fill="white"/>
+																			  <path d="M6.66666 7.58333C6.51195 7.58333 6.36358 7.52187 6.25418 7.41248C6.14479 7.30308 6.08333 7.15471 6.08333 7V2.33333C6.08333 2.17862 6.14479 2.03025 6.25418 1.92085C6.36358 1.81146 6.51195 1.75 6.66666 1.75C6.82137 1.75 6.96974 1.81146 7.07914 1.92085C7.18854 2.03025 7.24999 2.17862 7.24999 2.33333V7C7.24999 7.15471 7.18854 7.30308 7.07914 7.41248C6.96974 7.52187 6.82137 7.58333 6.66666 7.58333Z" fill="white"/>
+																		  </svg>
+
+																		  90k
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+																	  <div class="project-img">
+																		  <img src="images/projec-img1.png" alt="img-fluid"/>
+																	  </div>
+																	  <div class="project-des">
+																		  <h5>Angular</h5>
+																		  <span class="d-flex align-items-center">Google
+																		<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"/>
+</svg>
+
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="project-para">
+																	  <p>
+																		  Angular version 10 code complition and live previews from google.
+																	  </p>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"/>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-download d-flex align-items-center">
+
+																		  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M10.75 10.5H2.58332C2.26115 10.5 1.99998 10.7612 1.99998 11.0833C1.99998 11.4055 2.26115 11.6667 2.58332 11.6667H10.75C11.0722 11.6667 11.3333 11.4055 11.3333 11.0833C11.3333 10.7612 11.0722 10.5 10.75 10.5Z" fill="white"/>
+																			  <path d="M1.99998 9.91663V11.0833C1.99998 11.4055 2.26115 11.6666 2.58332 11.6666C2.90548 11.6666 3.16665 11.4055 3.16665 11.0833V9.91663C3.16665 9.59446 2.90548 9.33329 2.58332 9.33329C2.26115 9.33329 1.99998 9.59446 1.99998 9.91663Z" fill="white"/>
+																			  <path d="M10.1667 9.91663V11.0833C10.1667 11.4055 10.4278 11.6666 10.75 11.6666C11.0722 11.6666 11.3333 11.4055 11.3333 11.0833V9.91663C11.3333 9.59446 11.0722 9.33329 10.75 9.33329C10.4278 9.33329 10.1667 9.59446 10.1667 9.91663Z" fill="white"/>
+																			  <path d="M6.66667 8.75004C6.54573 8.75096 6.4275 8.71427 6.32834 8.64504L3.995 7.00004C3.86924 6.91083 3.78392 6.77546 3.75768 6.62352C3.73145 6.47157 3.76644 6.31543 3.855 6.18921C3.89921 6.12612 3.95548 6.07241 4.02055 6.03119C4.08563 5.98996 4.15823 5.96204 4.23416 5.94902C4.31009 5.936 4.38784 5.93815 4.46294 5.95535C4.53803 5.97255 4.60897 6.00445 4.67167 6.04921L6.66667 7.44338L8.65 5.95004C8.77377 5.85722 8.92934 5.81736 9.0825 5.83924C9.23565 5.86112 9.37384 5.94294 9.46667 6.06671C9.55949 6.19048 9.59935 6.34605 9.57747 6.49921C9.55559 6.65236 9.47377 6.79055 9.35 6.88338L7.01667 8.63338C6.9157 8.70911 6.79288 8.75004 6.66667 8.75004Z" fill="white"/>
+																			  <path d="M6.66666 7.58333C6.51195 7.58333 6.36358 7.52187 6.25418 7.41248C6.14479 7.30308 6.08333 7.15471 6.08333 7V2.33333C6.08333 2.17862 6.14479 2.03025 6.25418 1.92085C6.36358 1.81146 6.51195 1.75 6.66666 1.75C6.82137 1.75 6.96974 1.81146 7.07914 1.92085C7.18854 2.03025 7.24999 2.17862 7.24999 2.33333V7C7.24999 7.15471 7.18854 7.30308 7.07914 7.41248C6.96974 7.52187 6.82137 7.58333 6.66666 7.58333Z" fill="white"/>
+																		  </svg>
+
+																		  90k
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+													  </ul>
+												  </div>
+												  <div class="project-card-main loading-card-main">
+													  <div class="card-top-bar d-flex align-items-center justify-content-between">
+														  <h4 class="tab-title mb-0">Based on current project</h4>
+														  <div class="card-top-bar d-flex align-items-center justify-content-between">
+															  <h4 class="tab-title mb-0">Based on current project</h4>
+															  <a href="#" class="view-all">
+																  <span>Sort By :</span>
+																  <select>
+																	  <option value="option1">Featured
+																	  </option>
+																	  <option value="option2">option2
+																	  </option>
+																  </select>
+															  </a>
+														  </div>
+													  </div>
+													  <ul class="project-list">
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+																	  <div class="loading-img mr-3">
+																	  </div>
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-para">
+																	  <p></p>
+																	  <p></p>
+																	  <p></p>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate">
+
+
+																	  </div>
+																	  <div class="loading-rate">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+																	  <div class="loading-img mr-3">
+																	  </div>
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-para">
+																	  <p></p>
+																	  <p></p>
+																	  <p></p>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate">
+
+
+																	  </div>
+																	  <div class="loading-rate">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+																	  <div class="loading-img mr-3">
+																	  </div>
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-para">
+																	  <p></p>
+																	  <p></p>
+																	  <p></p>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate">
+
+
+																	  </div>
+																	  <div class="loading-rate">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+																	  <div class="loading-img mr-3">
+																	  </div>
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-para">
+																	  <p></p>
+																	  <p></p>
+																	  <p></p>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate">
+
+
+																	  </div>
+																	  <div class="loading-rate">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+													  </ul>
+												  </div>
+											  </div>
+											  <div class="tab-pane fade " id="ins" role="tabpanel" aria-labelledby="ins-tab">
+												  <div class="project-card-main">
+
+													  <ul class="project-list">
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+																	  <div class="project-img">
+																		  <img src="images/projec-img1.png" alt="img-fluid"/>
+																	  </div>
+																	  <div class="project-des">
+																		  <h5>Angular</h5>
+																		  <span class="d-flex align-items-center">Google
+																		<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"/>
+</svg>
+
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="project-para">
+																	  <p>
+																		  Angular version 10 code complition and live previews from google.
+																	  </p>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"/>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-download d-flex align-items-center">
+
+																		  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M10.75 10.5H2.58332C2.26115 10.5 1.99998 10.7612 1.99998 11.0833C1.99998 11.4055 2.26115 11.6667 2.58332 11.6667H10.75C11.0722 11.6667 11.3333 11.4055 11.3333 11.0833C11.3333 10.7612 11.0722 10.5 10.75 10.5Z" fill="white"/>
+																			  <path d="M1.99998 9.91663V11.0833C1.99998 11.4055 2.26115 11.6666 2.58332 11.6666C2.90548 11.6666 3.16665 11.4055 3.16665 11.0833V9.91663C3.16665 9.59446 2.90548 9.33329 2.58332 9.33329C2.26115 9.33329 1.99998 9.59446 1.99998 9.91663Z" fill="white"/>
+																			  <path d="M10.1667 9.91663V11.0833C10.1667 11.4055 10.4278 11.6666 10.75 11.6666C11.0722 11.6666 11.3333 11.4055 11.3333 11.0833V9.91663C11.3333 9.59446 11.0722 9.33329 10.75 9.33329C10.4278 9.33329 10.1667 9.59446 10.1667 9.91663Z" fill="white"/>
+																			  <path d="M6.66667 8.75004C6.54573 8.75096 6.4275 8.71427 6.32834 8.64504L3.995 7.00004C3.86924 6.91083 3.78392 6.77546 3.75768 6.62352C3.73145 6.47157 3.76644 6.31543 3.855 6.18921C3.89921 6.12612 3.95548 6.07241 4.02055 6.03119C4.08563 5.98996 4.15823 5.96204 4.23416 5.94902C4.31009 5.936 4.38784 5.93815 4.46294 5.95535C4.53803 5.97255 4.60897 6.00445 4.67167 6.04921L6.66667 7.44338L8.65 5.95004C8.77377 5.85722 8.92934 5.81736 9.0825 5.83924C9.23565 5.86112 9.37384 5.94294 9.46667 6.06671C9.55949 6.19048 9.59935 6.34605 9.57747 6.49921C9.55559 6.65236 9.47377 6.79055 9.35 6.88338L7.01667 8.63338C6.9157 8.70911 6.79288 8.75004 6.66667 8.75004Z" fill="white"/>
+																			  <path d="M6.66666 7.58333C6.51195 7.58333 6.36358 7.52187 6.25418 7.41248C6.14479 7.30308 6.08333 7.15471 6.08333 7V2.33333C6.08333 2.17862 6.14479 2.03025 6.25418 1.92085C6.36358 1.81146 6.51195 1.75 6.66666 1.75C6.82137 1.75 6.96974 1.81146 7.07914 1.92085C7.18854 2.03025 7.24999 2.17862 7.24999 2.33333V7C7.24999 7.15471 7.18854 7.30308 7.07914 7.41248C6.96974 7.52187 6.82137 7.58333 6.66666 7.58333Z" fill="white"/>
+																		  </svg>
+
+																		  90k
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+
+													  </ul>
+												  </div>
+
+											  </div>
+										  </div>
+
+									  </div>
+								  </div>
+							  </div>
+							  <div class="tab-pane fade " id="theme" role="tabpanel" aria-labelledby="theme-tab">
+								  <div class="extension-main-container">
+									  <div class="extension-search d-flex align-items-center">
+										  <div class="ex-input w-100">
+											  <input type="text" placeholder="Search Here...">
+											  <span class="input-addon">
+												<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.813 14.8711L11.8369 10.8951C12.9205 9.56987 13.4532 7.87893 13.325 6.17198C13.1967 4.46502 12.4173 2.87267 11.1479 1.72427C9.87853 0.575873 8.21632 -0.0406994 6.50509 0.00208668C4.79386 0.0448727 3.16454 0.743743 1.95414 1.95414C0.743743 3.16454 0.0448727 4.79386 0.00208668 6.50509C-0.0406994 8.21632 0.575873 9.87853 1.72427 11.1479C2.87267 12.4173 4.46502 13.1967 6.17198 13.325C7.87893 13.4532 9.56987 12.9205 10.8951 11.8369L14.8711 15.813C14.9968 15.9344 15.165 16.0015 15.3397 16C15.5143 15.9985 15.6814 15.9284 15.8049 15.8049C15.9284 15.6814 15.9985 15.5143 16 15.3397C16.0015 15.165 15.9344 14.9968 15.813 14.8711ZM6.68251 12.0115C5.62855 12.0115 4.59825 11.6989 3.72191 11.1134C2.84556 10.5278 2.16254 9.69556 1.7592 8.72182C1.35587 7.74808 1.25034 6.6766 1.45595 5.64289C1.66157 4.60917 2.16911 3.65964 2.91437 2.91437C3.65964 2.16911 4.60917 1.66157 5.64289 1.45595C6.6766 1.25034 7.74808 1.35587 8.72182 1.7592C9.69556 2.16254 10.5278 2.84556 11.1134 3.72191C11.6989 4.59825 12.0115 5.62855 12.0115 6.68251C12.0099 8.09535 11.4479 9.44987 10.4489 10.4489C9.44987 11.4479 8.09535 12.0099 6.68251 12.0115Z" fill="#D0D0D0"></path>
+</svg>
+
+											</span>
+										  </div>
+										  <button class="btn-search">Search</button>
+									  </div>
+									  <div class="extension-tab-main">
+										  <div class="extension-tab-top">
+											  <div class="card-top-bar d-flex align-items-center justify-content-between">
+												  <h4 class="tab-title mb-0">Theme Filter</h4>
+												  <a href="#" class="view-all">
+													  <span>Sort By :</span>
+													  <select>
+														  <option value="option1">Most popular
+														  </option>
+														  <option value="option2">popular
+														  </option>
+													  </select>
+												  </a>
+											  </div>
+											  <ul class="nav nav-tabs ex-tabs" id="myTab" role="tablist">
+												  <li class="nav-item">
+													  <a class="nav-link active show" id="light-tab" data-toggle="tab" href="#light" role="tab" aria-controls="light" aria-selected="true">
+														  <img src="images/tab2-img1.png" alt="image">
+														  <span>Light</span>
+													  </a>
+												  </li>
+												  <li class="nav-item">
+													  <a class="nav-link" id="dark-tab" data-toggle="tab" href="#dark" role="tab" aria-controls="dark" aria-selected="false">
+														  <img src="images/tab2-img2.png" alt="image">
+														  <span>Dark</span>
+													  </a>
+												  </li>
+												  <li class="nav-item">
+													  <a class="nav-link" id="color-tab" data-toggle="tab" href="#color" role="tab" aria-controls="color" aria-selected="false">
+														  <img src="images/tab2-img3.png" alt="image">
+														  <span>Color</span>
+													  </a>
+												  </li>
+												  <li class="nav-item">
+													  <a class="nav-link" id="ins1-tab" data-toggle="tab" href="#ins1" role="tab" aria-controls="ins1" aria-selected="false">
+														  <img src="images/tab-img4.png" alt="image">
+														  <span>Installed</span>
+													  </a>
+												  </li>
+											  </ul>
+										  </div>
+										  <div class="tab-content ex-tab-content" id="myTabContent">
+											  <div class="tab-pane fade active show" id="light" role="tabpanel" aria-labelledby="light-tab">
+												  <div class="project-card-main mb-0">
+
+													  <ul class="project-list theme-list">
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+
+																	  <div class="project-des">
+																		  <h5>Angular</h5>
+																		  <span class="d-flex align-items-center">Google
+																		<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"></path>
+</svg>
+
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="theme-img">
+																	  <img src="images/theme-img.png" alt="image" class="img-fluid"/>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"></path>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-download d-flex align-items-center">
+
+																		  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M10.75 10.5H2.58332C2.26115 10.5 1.99998 10.7612 1.99998 11.0833C1.99998 11.4055 2.26115 11.6667 2.58332 11.6667H10.75C11.0722 11.6667 11.3333 11.4055 11.3333 11.0833C11.3333 10.7612 11.0722 10.5 10.75 10.5Z" fill="white"></path>
+																			  <path d="M1.99998 9.91663V11.0833C1.99998 11.4055 2.26115 11.6666 2.58332 11.6666C2.90548 11.6666 3.16665 11.4055 3.16665 11.0833V9.91663C3.16665 9.59446 2.90548 9.33329 2.58332 9.33329C2.26115 9.33329 1.99998 9.59446 1.99998 9.91663Z" fill="white"></path>
+																			  <path d="M10.1667 9.91663V11.0833C10.1667 11.4055 10.4278 11.6666 10.75 11.6666C11.0722 11.6666 11.3333 11.4055 11.3333 11.0833V9.91663C11.3333 9.59446 11.0722 9.33329 10.75 9.33329C10.4278 9.33329 10.1667 9.59446 10.1667 9.91663Z" fill="white"></path>
+																			  <path d="M6.66667 8.75004C6.54573 8.75096 6.4275 8.71427 6.32834 8.64504L3.995 7.00004C3.86924 6.91083 3.78392 6.77546 3.75768 6.62352C3.73145 6.47157 3.76644 6.31543 3.855 6.18921C3.89921 6.12612 3.95548 6.07241 4.02055 6.03119C4.08563 5.98996 4.15823 5.96204 4.23416 5.94902C4.31009 5.936 4.38784 5.93815 4.46294 5.95535C4.53803 5.97255 4.60897 6.00445 4.67167 6.04921L6.66667 7.44338L8.65 5.95004C8.77377 5.85722 8.92934 5.81736 9.0825 5.83924C9.23565 5.86112 9.37384 5.94294 9.46667 6.06671C9.55949 6.19048 9.59935 6.34605 9.57747 6.49921C9.55559 6.65236 9.47377 6.79055 9.35 6.88338L7.01667 8.63338C6.9157 8.70911 6.79288 8.75004 6.66667 8.75004Z" fill="white"></path>
+																			  <path d="M6.66666 7.58333C6.51195 7.58333 6.36358 7.52187 6.25418 7.41248C6.14479 7.30308 6.08333 7.15471 6.08333 7V2.33333C6.08333 2.17862 6.14479 2.03025 6.25418 1.92085C6.36358 1.81146 6.51195 1.75 6.66666 1.75C6.82137 1.75 6.96974 1.81146 7.07914 1.92085C7.18854 2.03025 7.24999 2.17862 7.24999 2.33333V7C7.24999 7.15471 7.18854 7.30308 7.07914 7.41248C6.96974 7.52187 6.82137 7.58333 6.66666 7.58333Z" fill="white"></path>
+																		  </svg>
+
+																		  90k
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+
+																	  <div class="project-des">
+																		  <h5>Angular</h5>
+																		  <span class="d-flex align-items-center">Google
+																		<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"></path>
+</svg>
+
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="theme-img">
+																	  <img src="images/theme-img.png" alt="image" class="img-fluid"/>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"></path>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <div class="d-flex align-items-center">
+																		  <button class="btn-remove d-flex align-items-center">
+
+																			  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																				  <path d="M1.5 3H2.5H10.5" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"></path>
+																				  <path d="M4 3V2C4 1.73478 4.10536 1.48043 4.29289 1.29289C4.48043 1.10536 4.73478 1 5 1H7C7.26522 1 7.51957 1.10536 7.70711 1.29289C7.89464 1.48043 8 1.73478 8 2V3M9.5 3V10C9.5 10.2652 9.39464 10.5196 9.20711 10.7071C9.01957 10.8946 8.76522 11 8.5 11H3.5C3.23478 11 2.98043 10.8946 2.79289 10.7071C2.60536 10.5196 2.5 10.2652 2.5 10V3H9.5Z" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"></path>
+																				  <path d="M5 5.5V8.5" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"></path>
+																				  <path d="M7 5.5V8.5" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"></path>
+																			  </svg>
+
+																			  Remove
+																		  </button>
+																		  <button class="btn-download d-flex align-items-center justify-content-center ml-2	">Apply</button>
+																	  </div>
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+																	  <div class="project-img">
+																		  <img src="images/projec-img3.png" alt="img-fluid">
+																	  </div>
+																	  <div class="project-des">
+																		  <h5>Angular</h5>
+																		  <span class="d-flex align-items-center">Google <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"></path>
+</svg>
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="theme-img">
+																	  <img src="images/theme-img2.png" alt="image" class="img-fluid"/>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"></path>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-download d-flex align-items-center">
+
+																		  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M10.75 10.5H2.58332C2.26115 10.5 1.99998 10.7612 1.99998 11.0833C1.99998 11.4055 2.26115 11.6667 2.58332 11.6667H10.75C11.0722 11.6667 11.3333 11.4055 11.3333 11.0833C11.3333 10.7612 11.0722 10.5 10.75 10.5Z" fill="white"></path>
+																			  <path d="M1.99998 9.91663V11.0833C1.99998 11.4055 2.26115 11.6666 2.58332 11.6666C2.90548 11.6666 3.16665 11.4055 3.16665 11.0833V9.91663C3.16665 9.59446 2.90548 9.33329 2.58332 9.33329C2.26115 9.33329 1.99998 9.59446 1.99998 9.91663Z" fill="white"></path>
+																			  <path d="M10.1667 9.91663V11.0833C10.1667 11.4055 10.4278 11.6666 10.75 11.6666C11.0722 11.6666 11.3333 11.4055 11.3333 11.0833V9.91663C11.3333 9.59446 11.0722 9.33329 10.75 9.33329C10.4278 9.33329 10.1667 9.59446 10.1667 9.91663Z" fill="white"></path>
+																			  <path d="M6.66667 8.75004C6.54573 8.75096 6.4275 8.71427 6.32834 8.64504L3.995 7.00004C3.86924 6.91083 3.78392 6.77546 3.75768 6.62352C3.73145 6.47157 3.76644 6.31543 3.855 6.18921C3.89921 6.12612 3.95548 6.07241 4.02055 6.03119C4.08563 5.98996 4.15823 5.96204 4.23416 5.94902C4.31009 5.936 4.38784 5.93815 4.46294 5.95535C4.53803 5.97255 4.60897 6.00445 4.67167 6.04921L6.66667 7.44338L8.65 5.95004C8.77377 5.85722 8.92934 5.81736 9.0825 5.83924C9.23565 5.86112 9.37384 5.94294 9.46667 6.06671C9.55949 6.19048 9.59935 6.34605 9.57747 6.49921C9.55559 6.65236 9.47377 6.79055 9.35 6.88338L7.01667 8.63338C6.9157 8.70911 6.79288 8.75004 6.66667 8.75004Z" fill="white"></path>
+																			  <path d="M6.66666 7.58333C6.51195 7.58333 6.36358 7.52187 6.25418 7.41248C6.14479 7.30308 6.08333 7.15471 6.08333 7V2.33333C6.08333 2.17862 6.14479 2.03025 6.25418 1.92085C6.36358 1.81146 6.51195 1.75 6.66666 1.75C6.82137 1.75 6.96974 1.81146 7.07914 1.92085C7.18854 2.03025 7.24999 2.17862 7.24999 2.33333V7C7.24999 7.15471 7.18854 7.30308 7.07914 7.41248C6.96974 7.52187 6.82137 7.58333 6.66666 7.58333Z" fill="white"></path>
+																		  </svg>
+
+																		  90k
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+
+													  </ul>
+												  </div>
+												  <div class="project-card-main loading-card-main">
+
+
+													  <ul class="project-list theme-list">
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-theme-img">
+																	  <span></span>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate-theme">
+
+
+																	  </div>
+																	  <div class="loading-rate-theme">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-theme-img">
+																	  <span></span>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate-theme">
+
+
+																	  </div>
+																	  <div class="loading-rate-theme">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-theme-img">
+																	  <span></span>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate-theme">
+
+
+																	  </div>
+																	  <div class="loading-rate-theme">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+
+													  </ul>
+												  </div>
+											  </div>
+
+											  <div class="tab-pane fade" id="dark" role="tabpanel" aria-labelledby="dark-tab">
+												  <div class="project-card-main mb-0">
+
+													  <ul class="project-list theme-list">
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+
+																	  <div class="project-des">
+																		  <h5>Angular</h5>
+																		  <span class="d-flex align-items-center">Google
+																		<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"></path>
+</svg>
+
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="theme-img">
+																	  <img src="images/theme-img.png" alt="image" class="img-fluid"/>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"></path>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-download d-flex align-items-center">
+
+																		  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M10.75 10.5H2.58332C2.26115 10.5 1.99998 10.7612 1.99998 11.0833C1.99998 11.4055 2.26115 11.6667 2.58332 11.6667H10.75C11.0722 11.6667 11.3333 11.4055 11.3333 11.0833C11.3333 10.7612 11.0722 10.5 10.75 10.5Z" fill="white"></path>
+																			  <path d="M1.99998 9.91663V11.0833C1.99998 11.4055 2.26115 11.6666 2.58332 11.6666C2.90548 11.6666 3.16665 11.4055 3.16665 11.0833V9.91663C3.16665 9.59446 2.90548 9.33329 2.58332 9.33329C2.26115 9.33329 1.99998 9.59446 1.99998 9.91663Z" fill="white"></path>
+																			  <path d="M10.1667 9.91663V11.0833C10.1667 11.4055 10.4278 11.6666 10.75 11.6666C11.0722 11.6666 11.3333 11.4055 11.3333 11.0833V9.91663C11.3333 9.59446 11.0722 9.33329 10.75 9.33329C10.4278 9.33329 10.1667 9.59446 10.1667 9.91663Z" fill="white"></path>
+																			  <path d="M6.66667 8.75004C6.54573 8.75096 6.4275 8.71427 6.32834 8.64504L3.995 7.00004C3.86924 6.91083 3.78392 6.77546 3.75768 6.62352C3.73145 6.47157 3.76644 6.31543 3.855 6.18921C3.89921 6.12612 3.95548 6.07241 4.02055 6.03119C4.08563 5.98996 4.15823 5.96204 4.23416 5.94902C4.31009 5.936 4.38784 5.93815 4.46294 5.95535C4.53803 5.97255 4.60897 6.00445 4.67167 6.04921L6.66667 7.44338L8.65 5.95004C8.77377 5.85722 8.92934 5.81736 9.0825 5.83924C9.23565 5.86112 9.37384 5.94294 9.46667 6.06671C9.55949 6.19048 9.59935 6.34605 9.57747 6.49921C9.55559 6.65236 9.47377 6.79055 9.35 6.88338L7.01667 8.63338C6.9157 8.70911 6.79288 8.75004 6.66667 8.75004Z" fill="white"></path>
+																			  <path d="M6.66666 7.58333C6.51195 7.58333 6.36358 7.52187 6.25418 7.41248C6.14479 7.30308 6.08333 7.15471 6.08333 7V2.33333C6.08333 2.17862 6.14479 2.03025 6.25418 1.92085C6.36358 1.81146 6.51195 1.75 6.66666 1.75C6.82137 1.75 6.96974 1.81146 7.07914 1.92085C7.18854 2.03025 7.24999 2.17862 7.24999 2.33333V7C7.24999 7.15471 7.18854 7.30308 7.07914 7.41248C6.96974 7.52187 6.82137 7.58333 6.66666 7.58333Z" fill="white"></path>
+																		  </svg>
+
+																		  90k
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+
+																	  <div class="project-des">
+																		  <h5>Angular</h5>
+																		  <span class="d-flex align-items-center">Google
+																		<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"></path>
+</svg>
+
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="theme-img">
+																	  <img src="images/theme-img.png" alt="image" class="img-fluid"/>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"></path>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <div class="d-flex align-items-center">
+																		  <button class="btn-remove d-flex align-items-center">
+
+																			  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																				  <path d="M1.5 3H2.5H10.5" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"></path>
+																				  <path d="M4 3V2C4 1.73478 4.10536 1.48043 4.29289 1.29289C4.48043 1.10536 4.73478 1 5 1H7C7.26522 1 7.51957 1.10536 7.70711 1.29289C7.89464 1.48043 8 1.73478 8 2V3M9.5 3V10C9.5 10.2652 9.39464 10.5196 9.20711 10.7071C9.01957 10.8946 8.76522 11 8.5 11H3.5C3.23478 11 2.98043 10.8946 2.79289 10.7071C2.60536 10.5196 2.5 10.2652 2.5 10V3H9.5Z" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"></path>
+																				  <path d="M5 5.5V8.5" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"></path>
+																				  <path d="M7 5.5V8.5" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"></path>
+																			  </svg>
+
+																			  Remove
+																		  </button>
+																		  <button class="btn-download d-flex align-items-center justify-content-center ml-2	">Apply</button>
+																	  </div>
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+																	  <div class="project-img">
+																		  <img src="images/projec-img3.png" alt="img-fluid">
+																	  </div>
+																	  <div class="project-des">
+																		  <h5>Angular</h5>
+																		  <span class="d-flex align-items-center">Google <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"></path>
+</svg>
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="theme-img">
+																	  <img src="images/theme-img2.png" alt="image" class="img-fluid"/>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"></path>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-download d-flex align-items-center">
+
+																		  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M10.75 10.5H2.58332C2.26115 10.5 1.99998 10.7612 1.99998 11.0833C1.99998 11.4055 2.26115 11.6667 2.58332 11.6667H10.75C11.0722 11.6667 11.3333 11.4055 11.3333 11.0833C11.3333 10.7612 11.0722 10.5 10.75 10.5Z" fill="white"></path>
+																			  <path d="M1.99998 9.91663V11.0833C1.99998 11.4055 2.26115 11.6666 2.58332 11.6666C2.90548 11.6666 3.16665 11.4055 3.16665 11.0833V9.91663C3.16665 9.59446 2.90548 9.33329 2.58332 9.33329C2.26115 9.33329 1.99998 9.59446 1.99998 9.91663Z" fill="white"></path>
+																			  <path d="M10.1667 9.91663V11.0833C10.1667 11.4055 10.4278 11.6666 10.75 11.6666C11.0722 11.6666 11.3333 11.4055 11.3333 11.0833V9.91663C11.3333 9.59446 11.0722 9.33329 10.75 9.33329C10.4278 9.33329 10.1667 9.59446 10.1667 9.91663Z" fill="white"></path>
+																			  <path d="M6.66667 8.75004C6.54573 8.75096 6.4275 8.71427 6.32834 8.64504L3.995 7.00004C3.86924 6.91083 3.78392 6.77546 3.75768 6.62352C3.73145 6.47157 3.76644 6.31543 3.855 6.18921C3.89921 6.12612 3.95548 6.07241 4.02055 6.03119C4.08563 5.98996 4.15823 5.96204 4.23416 5.94902C4.31009 5.936 4.38784 5.93815 4.46294 5.95535C4.53803 5.97255 4.60897 6.00445 4.67167 6.04921L6.66667 7.44338L8.65 5.95004C8.77377 5.85722 8.92934 5.81736 9.0825 5.83924C9.23565 5.86112 9.37384 5.94294 9.46667 6.06671C9.55949 6.19048 9.59935 6.34605 9.57747 6.49921C9.55559 6.65236 9.47377 6.79055 9.35 6.88338L7.01667 8.63338C6.9157 8.70911 6.79288 8.75004 6.66667 8.75004Z" fill="white"></path>
+																			  <path d="M6.66666 7.58333C6.51195 7.58333 6.36358 7.52187 6.25418 7.41248C6.14479 7.30308 6.08333 7.15471 6.08333 7V2.33333C6.08333 2.17862 6.14479 2.03025 6.25418 1.92085C6.36358 1.81146 6.51195 1.75 6.66666 1.75C6.82137 1.75 6.96974 1.81146 7.07914 1.92085C7.18854 2.03025 7.24999 2.17862 7.24999 2.33333V7C7.24999 7.15471 7.18854 7.30308 7.07914 7.41248C6.96974 7.52187 6.82137 7.58333 6.66666 7.58333Z" fill="white"></path>
+																		  </svg>
+
+																		  90k
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+
+													  </ul>
+												  </div>
+												  <div class="project-card-main loading-card-main">
+
+
+													  <ul class="project-list theme-list">
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-theme-img">
+																	  <span></span>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate-theme">
+
+
+																	  </div>
+																	  <div class="loading-rate-theme">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-theme-img">
+																	  <span></span>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate-theme">
+
+
+																	  </div>
+																	  <div class="loading-rate-theme">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-theme-img">
+																	  <span></span>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate-theme">
+
+
+																	  </div>
+																	  <div class="loading-rate-theme">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+
+													  </ul>
+												  </div>
+											  </div>
+											  <div class="tab-pane fade" id="color" role="tabpanel" aria-labelledby="color-tab">
+												  <div class="project-card-main mb-0">
+
+													  <ul class="project-list theme-list">
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+
+																	  <div class="project-des">
+																		  <h5>Angular</h5>
+																		  <span class="d-flex align-items-center">Google
+																		<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"></path>
+</svg>
+
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="theme-img">
+																	  <img src="images/theme-img.png" alt="image" class="img-fluid"/>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"></path>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-download d-flex align-items-center">
+
+																		  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M10.75 10.5H2.58332C2.26115 10.5 1.99998 10.7612 1.99998 11.0833C1.99998 11.4055 2.26115 11.6667 2.58332 11.6667H10.75C11.0722 11.6667 11.3333 11.4055 11.3333 11.0833C11.3333 10.7612 11.0722 10.5 10.75 10.5Z" fill="white"></path>
+																			  <path d="M1.99998 9.91663V11.0833C1.99998 11.4055 2.26115 11.6666 2.58332 11.6666C2.90548 11.6666 3.16665 11.4055 3.16665 11.0833V9.91663C3.16665 9.59446 2.90548 9.33329 2.58332 9.33329C2.26115 9.33329 1.99998 9.59446 1.99998 9.91663Z" fill="white"></path>
+																			  <path d="M10.1667 9.91663V11.0833C10.1667 11.4055 10.4278 11.6666 10.75 11.6666C11.0722 11.6666 11.3333 11.4055 11.3333 11.0833V9.91663C11.3333 9.59446 11.0722 9.33329 10.75 9.33329C10.4278 9.33329 10.1667 9.59446 10.1667 9.91663Z" fill="white"></path>
+																			  <path d="M6.66667 8.75004C6.54573 8.75096 6.4275 8.71427 6.32834 8.64504L3.995 7.00004C3.86924 6.91083 3.78392 6.77546 3.75768 6.62352C3.73145 6.47157 3.76644 6.31543 3.855 6.18921C3.89921 6.12612 3.95548 6.07241 4.02055 6.03119C4.08563 5.98996 4.15823 5.96204 4.23416 5.94902C4.31009 5.936 4.38784 5.93815 4.46294 5.95535C4.53803 5.97255 4.60897 6.00445 4.67167 6.04921L6.66667 7.44338L8.65 5.95004C8.77377 5.85722 8.92934 5.81736 9.0825 5.83924C9.23565 5.86112 9.37384 5.94294 9.46667 6.06671C9.55949 6.19048 9.59935 6.34605 9.57747 6.49921C9.55559 6.65236 9.47377 6.79055 9.35 6.88338L7.01667 8.63338C6.9157 8.70911 6.79288 8.75004 6.66667 8.75004Z" fill="white"></path>
+																			  <path d="M6.66666 7.58333C6.51195 7.58333 6.36358 7.52187 6.25418 7.41248C6.14479 7.30308 6.08333 7.15471 6.08333 7V2.33333C6.08333 2.17862 6.14479 2.03025 6.25418 1.92085C6.36358 1.81146 6.51195 1.75 6.66666 1.75C6.82137 1.75 6.96974 1.81146 7.07914 1.92085C7.18854 2.03025 7.24999 2.17862 7.24999 2.33333V7C7.24999 7.15471 7.18854 7.30308 7.07914 7.41248C6.96974 7.52187 6.82137 7.58333 6.66666 7.58333Z" fill="white"></path>
+																		  </svg>
+
+																		  90k
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+
+																	  <div class="project-des">
+																		  <h5>Angular</h5>
+																		  <span class="d-flex align-items-center">Google
+																		<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"></path>
+</svg>
+
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="theme-img">
+																	  <img src="images/theme-img.png" alt="image" class="img-fluid"/>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"></path>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <div class="d-flex align-items-center">
+																		  <button class="btn-remove d-flex align-items-center">
+
+																			  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																				  <path d="M1.5 3H2.5H10.5" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"></path>
+																				  <path d="M4 3V2C4 1.73478 4.10536 1.48043 4.29289 1.29289C4.48043 1.10536 4.73478 1 5 1H7C7.26522 1 7.51957 1.10536 7.70711 1.29289C7.89464 1.48043 8 1.73478 8 2V3M9.5 3V10C9.5 10.2652 9.39464 10.5196 9.20711 10.7071C9.01957 10.8946 8.76522 11 8.5 11H3.5C3.23478 11 2.98043 10.8946 2.79289 10.7071C2.60536 10.5196 2.5 10.2652 2.5 10V3H9.5Z" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"></path>
+																				  <path d="M5 5.5V8.5" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"></path>
+																				  <path d="M7 5.5V8.5" stroke="#D0D0D0" stroke-linecap="round" stroke-linejoin="round"></path>
+																			  </svg>
+
+																			  Remove
+																		  </button>
+																		  <button class="btn-download d-flex align-items-center justify-content-center ml-2	">Apply</button>
+																	  </div>
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+																	  <div class="project-img">
+																		  <img src="images/projec-img3.png" alt="img-fluid">
+																	  </div>
+																	  <div class="project-des">
+																		  <h5>Angular</h5>
+																		  <span class="d-flex align-items-center">Google <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"></path>
+</svg>
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="theme-img">
+																	  <img src="images/theme-img2.png" alt="image" class="img-fluid"/>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"></path>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-download d-flex align-items-center">
+
+																		  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M10.75 10.5H2.58332C2.26115 10.5 1.99998 10.7612 1.99998 11.0833C1.99998 11.4055 2.26115 11.6667 2.58332 11.6667H10.75C11.0722 11.6667 11.3333 11.4055 11.3333 11.0833C11.3333 10.7612 11.0722 10.5 10.75 10.5Z" fill="white"></path>
+																			  <path d="M1.99998 9.91663V11.0833C1.99998 11.4055 2.26115 11.6666 2.58332 11.6666C2.90548 11.6666 3.16665 11.4055 3.16665 11.0833V9.91663C3.16665 9.59446 2.90548 9.33329 2.58332 9.33329C2.26115 9.33329 1.99998 9.59446 1.99998 9.91663Z" fill="white"></path>
+																			  <path d="M10.1667 9.91663V11.0833C10.1667 11.4055 10.4278 11.6666 10.75 11.6666C11.0722 11.6666 11.3333 11.4055 11.3333 11.0833V9.91663C11.3333 9.59446 11.0722 9.33329 10.75 9.33329C10.4278 9.33329 10.1667 9.59446 10.1667 9.91663Z" fill="white"></path>
+																			  <path d="M6.66667 8.75004C6.54573 8.75096 6.4275 8.71427 6.32834 8.64504L3.995 7.00004C3.86924 6.91083 3.78392 6.77546 3.75768 6.62352C3.73145 6.47157 3.76644 6.31543 3.855 6.18921C3.89921 6.12612 3.95548 6.07241 4.02055 6.03119C4.08563 5.98996 4.15823 5.96204 4.23416 5.94902C4.31009 5.936 4.38784 5.93815 4.46294 5.95535C4.53803 5.97255 4.60897 6.00445 4.67167 6.04921L6.66667 7.44338L8.65 5.95004C8.77377 5.85722 8.92934 5.81736 9.0825 5.83924C9.23565 5.86112 9.37384 5.94294 9.46667 6.06671C9.55949 6.19048 9.59935 6.34605 9.57747 6.49921C9.55559 6.65236 9.47377 6.79055 9.35 6.88338L7.01667 8.63338C6.9157 8.70911 6.79288 8.75004 6.66667 8.75004Z" fill="white"></path>
+																			  <path d="M6.66666 7.58333C6.51195 7.58333 6.36358 7.52187 6.25418 7.41248C6.14479 7.30308 6.08333 7.15471 6.08333 7V2.33333C6.08333 2.17862 6.14479 2.03025 6.25418 1.92085C6.36358 1.81146 6.51195 1.75 6.66666 1.75C6.82137 1.75 6.96974 1.81146 7.07914 1.92085C7.18854 2.03025 7.24999 2.17862 7.24999 2.33333V7C7.24999 7.15471 7.18854 7.30308 7.07914 7.41248C6.96974 7.52187 6.82137 7.58333 6.66666 7.58333Z" fill="white"></path>
+																		  </svg>
+
+																		  90k
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+
+													  </ul>
+												  </div>
+												  <div class="project-card-main loading-card-main">
+
+
+													  <ul class="project-list theme-list">
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-theme-img">
+																	  <span></span>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate-theme">
+
+
+																	  </div>
+																	  <div class="loading-rate-theme">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-theme-img">
+																	  <span></span>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate-theme">
+
+
+																	  </div>
+																	  <div class="loading-rate-theme">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center mb-4">
+
+																	  <div class="loading-des">
+																		  <h5 class="loading-heading"></h5>
+																		  <span class="loading-small-text">
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="loading-theme-img">
+																	  <span></span>
+																  </div>
+																  <div class="loading-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="loading-rate-theme">
+
+
+																	  </div>
+																	  <div class="loading-rate-theme">
+
+
+																	  </div>
+
+																  </div>
+															  </div>
+														  </li>
+
+													  </ul>
+												  </div>
+											  </div>
+											  <div class="tab-pane fade" id="ins1" role="tabpanel" aria-labelledby="ins1-tab">
+												  <div class="project-card-main mb-0">
+
+													  <ul class="project-list theme-list">
+														  <li>
+															  <div class="project-card">
+																  <div class="project-card-top d-flex align-items-center">
+
+																	  <div class="project-des">
+																		  <h5>Angular</h5>
+																		  <span class="d-flex align-items-center">Google
+																		<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.79388 4.48899L9.1193 3.65201C9.01312 3.5146 8.94441 3.3522 8.92567 3.17106L8.807 2.10923C8.78292 1.8972 8.68766 1.69961 8.53677 1.54872C8.38588 1.39783 8.18829 1.30257 7.97626 1.27849L6.91443 1.15982C6.72705 1.14108 6.56465 1.05988 6.42723 0.953698L5.59026 0.279119C5.24672 0.00429098 4.75953 0.00429098 4.41599 0.279119L3.57901 0.953698C3.4416 1.05988 3.2792 1.12859 3.09806 1.14733L2.03623 1.266C1.599 1.31597 1.25547 1.65951 1.2055 2.09673L1.08682 3.15857C1.06808 3.34595 0.986883 3.50835 0.8807 3.64577L0.206121 4.48274C-0.0687071 4.82628 -0.0687071 5.31347 0.206121 5.65701L0.8807 6.49399C0.986883 6.6314 1.05559 6.7938 1.07433 6.97493L1.193 8.03677C1.24297 8.474 1.58651 8.81753 2.02374 8.8675L3.08557 8.98618C3.27295 9.00492 3.43535 9.08611 3.57277 9.1923L4.40974 9.86688C4.75328 10.1417 5.24047 10.1417 5.58401 9.86688L6.42099 9.1923C6.5584 9.08611 6.7208 9.01741 6.90194 8.99867L7.96377 8.87999C8.401 8.83002 8.74453 8.48649 8.7945 8.04926L8.91318 6.98743C8.93192 6.80004 9.01312 6.63764 9.1193 6.50023L9.79388 5.66325C10.0687 5.31972 10.0687 4.83252 9.79388 4.48899ZM4.06621 7.57456L1.88007 5.38843L2.81699 4.45151L4.06621 5.70073L7.18926 2.57768L8.12617 3.54583L4.06621 7.57456Z" fill="#49AF78"></path>
+</svg>
+
+																		</span>
+																	  </div>
+																  </div>
+																  <div class="theme-img">
+																	  <img src="images/theme-img.png" alt="image" class="img-fluid"/>
+																  </div>
+																  <div class="project-card-bottom d-flex align-items-center justify-content-between">
+																	  <div class="card-rate d-flex align-items-center">
+																		  4.1 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+																		  <path d="M12.0343 5.36082C12.0942 5.06106 11.8544 4.70133 11.5546 4.70133L8.13727 4.2217L6.57848 1.10411C6.51852 0.9842 6.45857 0.924246 6.33866 0.864292C6.03889 0.684431 5.67917 0.804339 5.49931 1.10411L4.00047 4.2217L0.583102 4.70133C0.403241 4.70133 0.283333 4.76129 0.223379 4.88119C-0.0164357 5.12101 -0.0164357 5.48073 0.223379 5.72055L2.68148 8.1187L2.08195 11.5361C2.08195 11.656 2.08195 11.7759 2.1419 11.8958C2.32176 12.1956 2.68148 12.3155 2.98125 12.1356L6.03889 10.5168L9.09654 12.1356C9.15649 12.1956 9.2764 12.1956 9.3963 12.1956C9.45626 12.1956 9.45626 12.1956 9.51621 12.1956C9.81598 12.1356 10.0558 11.8358 9.99584 11.4761L9.3963 8.05874L11.8544 5.66059C11.9743 5.60064 12.0343 5.48073 12.0343 5.36082Z" fill="#D0D0D0"></path>
+																	  </svg>
+
+																	  </div>
+																	  <div class="on-hover-text">
+																		  <h6>1k+ Reviews</h6>
+																		  <div class="review-star d-flex">
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star"></i>
+																			  <i class="fa fa-star-o"></i>
+																		  </div>
+																	  </div>
+																	  <button class="btn-download d-flex align-items-center">
+
+																		  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+																			  <path d="M10.75 10.5H2.58332C2.26115 10.5 1.99998 10.7612 1.99998 11.0833C1.99998 11.4055 2.26115 11.6667 2.58332 11.6667H10.75C11.0722 11.6667 11.3333 11.4055 11.3333 11.0833C11.3333 10.7612 11.0722 10.5 10.75 10.5Z" fill="white"></path>
+																			  <path d="M1.99998 9.91663V11.0833C1.99998 11.4055 2.26115 11.6666 2.58332 11.6666C2.90548 11.6666 3.16665 11.4055 3.16665 11.0833V9.91663C3.16665 9.59446 2.90548 9.33329 2.58332 9.33329C2.26115 9.33329 1.99998 9.59446 1.99998 9.91663Z" fill="white"></path>
+																			  <path d="M10.1667 9.91663V11.0833C10.1667 11.4055 10.4278 11.6666 10.75 11.6666C11.0722 11.6666 11.3333 11.4055 11.3333 11.0833V9.91663C11.3333 9.59446 11.0722 9.33329 10.75 9.33329C10.4278 9.33329 10.1667 9.59446 10.1667 9.91663Z" fill="white"></path>
+																			  <path d="M6.66667 8.75004C6.54573 8.75096 6.4275 8.71427 6.32834 8.64504L3.995 7.00004C3.86924 6.91083 3.78392 6.77546 3.75768 6.62352C3.73145 6.47157 3.76644 6.31543 3.855 6.18921C3.89921 6.12612 3.95548 6.07241 4.02055 6.03119C4.08563 5.98996 4.15823 5.96204 4.23416 5.94902C4.31009 5.936 4.38784 5.93815 4.46294 5.95535C4.53803 5.97255 4.60897 6.00445 4.67167 6.04921L6.66667 7.44338L8.65 5.95004C8.77377 5.85722 8.92934 5.81736 9.0825 5.83924C9.23565 5.86112 9.37384 5.94294 9.46667 6.06671C9.55949 6.19048 9.59935 6.34605 9.57747 6.49921C9.55559 6.65236 9.47377 6.79055 9.35 6.88338L7.01667 8.63338C6.9157 8.70911 6.79288 8.75004 6.66667 8.75004Z" fill="white"></path>
+																			  <path d="M6.66666 7.58333C6.51195 7.58333 6.36358 7.52187 6.25418 7.41248C6.14479 7.30308 6.08333 7.15471 6.08333 7V2.33333C6.08333 2.17862 6.14479 2.03025 6.25418 1.92085C6.36358 1.81146 6.51195 1.75 6.66666 1.75C6.82137 1.75 6.96974 1.81146 7.07914 1.92085C7.18854 2.03025 7.24999 2.17862 7.24999 2.33333V7C7.24999 7.15471 7.18854 7.30308 7.07914 7.41248C6.96974 7.52187 6.82137 7.58333 6.66666 7.58333Z" fill="white"></path>
+																		  </svg>
+
+																		  90k
+																	  </button>
+																  </div>
+															  </div>
+														  </li>
+
+													  </ul>
+												  </div>
+
+											  </div>
+										  </div>
+									  </div>
+								  </div>
+							  </div>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+	</div>
+      <!-- Javascript -->
+      <script  src="assets/js/jquery.min.js"></script>
+      <script  src="assets/js/Popper.js"></script>
+      <script  src="assets/js/bootstrap.min.js"></script>
+      <script  src="assets/js/jquery.easing.min.js"></script>
+      <script  src="assets/js/main.js"></script>
+      <script  src="assets/js/select.js"></script>
+      <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.5/js/min/perfect-scrollbar.jquery.min.js"></script>
+      <!-- Appear js -->
+      <script src="assets/js/appear.min.js"></script>
+   </body>
+</html>
