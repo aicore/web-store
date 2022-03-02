@@ -1,6 +1,6 @@
 {
   "name": "@aicore/web-store",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "web app store",
   "main": "index.js",
   "type": "module",
