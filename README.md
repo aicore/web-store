@@ -16,11 +16,6 @@ The frontend for Phoenix/Brackets web store.
   <img src="https://sonarcloud.io/api/project_badges/measure?project=aicore_web-store&metric=sqale_index" alt="Technical debt" />
 </a>
 
-
-# TODOs after template use
-1. Update package.json with your app defaults
-
-
 # Commands available
 
 ## Building
@@ -39,86 +34,6 @@ To Automatically fix lint errors:
 ```shell
 > npm run lint:fix
 ```
-
-## Testing
-To run all tests:
-```shell
-> npm run test
-  Hello world Tests
-    ✔ should return Hello World
-    #indexOf()
-      ✔ should return -1 when the value is not present
-```
-
-Additionally, to run unit/integration tests only, use the commands:
-```shell
-> npm run test:unit
-> npm run test:integ
-```
-
-## Coverage Reports
-To run all tests with coverage:
-
-```shell
-> npm run cover
-  Hello world Tests
-    ✔ should return Hello World
-    #indexOf()
-      ✔ should return -1 when the value is not present
-
-
-  2 passing (6ms)
-
-----------|---------|----------|---------|---------|-------------------
-File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-----------|---------|----------|---------|---------|-------------------
-All files |     100 |      100 |     100 |     100 |                   
- index.js |     100 |      100 |     100 |     100 |                   
-----------|---------|----------|---------|---------|-------------------
-
-=============================== Coverage summary ===============================
-Statements   : 100% ( 5/5 )
-Branches     : 100% ( 2/2 )
-Functions    : 100% ( 1/1 )
-Lines        : 100% ( 5/5 )
-================================================================================
-Detailed unit test coverage report: file:///template-nodejs/coverage-unit/index.html
-Detailed integration test coverage report: file:///template-nodejs/coverage-integration/index.html
-```
-After running coverage, detailed reports can be found in the coverage folder listed in the output of coverage command.
-Open the file in browser to view detailed reports.
-
-To run unit/integration tests only with coverage
-```shell
-> npm run cover:unit
-> npm run cover:integ
-```
-
-Sample coverage report:
-![image](https://user-images.githubusercontent.com/5336369/148687351-6d6c12a2-a232-433d-ab62-2cf5d39c96bd.png)
-
-### Unit and Integration coverage configs
-Unit and integration test coverage settings can be updated by configs `.nycrc.unit.json` and `.nycrc.integration.json`.
-
-See https://github.com/istanbuljs/nyc for config options.
-
-# Publishing packages to NPM
-To publish a package to npm, push contents to `npm` branch in 
-this repository. 
-
-## Publishing `@aicore/package*`
-If you are looking to publish to package owned by core.ai, you will need access to the GitHub Organization secret `NPM_TOKEN`.
-
-For repos managed by [aicore](https://github.com/aicore) org in GitHub, Please contact your Admin to get access to core.ai's NPM tokens.
-
-
-## Publishing to your own npm account
-Alternatively, if you want to publish the package to your own npm account, please follow these docs:
-1. Create an automation access token by following this [link](https://docs.npmjs.com/creating-and-viewing-access-tokens).
-2. Add NPM_TOKEN to your repository secret by following this [link](https://docs.npmjs.com/using-private-packages-in-a-ci-cd-workflow)
-
-To edit the publishing workflow, please see file: `.github/workflows/npm-publish.yml`
-
 
 # Dependency updates
   We use Rennovate for dependency updates: https://blog.logrocket.com/renovate-dependency-updates-on-steroids/
