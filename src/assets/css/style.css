@@ -419,10 +419,11 @@ color: #D0D0D0;
 .modal-popup .modal-content::-webkit-scrollbar {
     width: 12px;
     height: 12px;
-    background-color: rgba(15, 15, 15,1);
+	box-shadow: 0 0 0 4px #3C3F41 inset;
  }
 .modal-popup .modal-content::-webkit-scrollbar-thumb {
   box-shadow: 0 0 0 12px rgba(49, 49, 49,1) inset;
+	border-radius: 999px;
         }
 .modal-popup .modal-content::-webkit-scrollbar-thumb:hover,
 .modal-popup .modal-content::-webkit-scrollbar-thumb:focus {
